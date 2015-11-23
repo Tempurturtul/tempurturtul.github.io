@@ -1,0 +1,78 @@
+/*  TODO:
+ *    Use media queries.
+ *    Identify groups of related rules with comments.
+ */
+
+.container {
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.col {
+}
+
+.hero {
+  border: solid black 1px;
+  width: 100%;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+/******************************
+ The header and it's contents.
+******************************/
+header {
+  display: flex;
+  padding: 10px 0;
+}
+
+/* The title and subtitle container. */
+header div {
+  flex: 1 1 auto;
+  text-align: right;
+  margin: 0 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* The title. */
+header h1 {
+}
+
+/* The subtitle. */
+header p {
+}
+
+/******************************
+ The main content.
+******************************/
+h2 {
+  text-align: center;
+  border-bottom: solid 1px #BBB;
+  margin: 15px 0;
+  padding-bottom: 5px;
+}
+
+article {
+  border: solid black 1px;
+  text-align: center;
+}
+
+article img {
+  max-width: 100%;
+}
+
+/******************************
+ Media Queries
+******************************/
