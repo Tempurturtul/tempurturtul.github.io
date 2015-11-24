@@ -3,9 +3,76 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Under Construction...</title>
+    <title>Matthew Feidt - Web Dev Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet'>
+    <link rel="stylesheet" href="content/normalize.css">
+    <!-- Stylesheet for toastr. (https://github.com/CodeSeven/toastr) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="content/main.css">
   </head>
   <body>
+    <div class="container">
+      <header>
+        <a href="https://www.udacity.com/" target="_blank">
+          <img src="content/img/udacity-logo.jpg" alt="Udacity logo.">
+        </a>
+        <div class='col'>
+          <h1>Matthew Feidt</h1>
+          <p>Web Dev</p>
+        </div>
+      </header>
+      <div class="hero">
+        <!-- The hero banner as a background image. -->
+      </div>
+      <main>
+        <h2>Featured Work</h2>
+        <div class="flex-container">
+          <article>
+            <h3>Pomodoro Clock</h3>
+            <time datetime="2015-09">September 2015</time>
+            <a href="http://tempurturtul.github.io/pomodoro-clock" target="_blank">
+              <img src="content/img/pomodoro-clock-600x600.png" srcset="content/img/pomodoro-clock-300x300.png 300w, content/img/pomodoro-clock-600x600.png 600w" alt="A preview image for the Pomodoro Clock site.">
+            </a>
+            <p>Based on the <a href="https://en.wikipedia.org/wiki/Pomodoro_Technique" target="_blank">Pomodoro Technique</a>, this site provides a time management clock with customizable work and break cycles, including a long-break cycle which occurs at a specified frequency.  I use the canvas element to programmatically draw the clock itself, and use a browser notification combined with an audible alarm (toggleable) to alert the user of the end of a clock cycle.</p>
+          </article>
+          <article>
+            <h3>Local Weather</h3>
+            <time datetime="2015-08">August 2015</time>
+            <a href="http://tempurturtul.github.io/local-weather" target="_blank">
+              <img src="content/img/local-weather-600x600.png" srcset="content/img/local-weather-300x300.png 300w, content/img/local-weather-600x600.png 600w" alt="A preview image for the Local Weather site.">
+            </a>
+            <p>This site uses your browser's location services to display local weather information gathered from Yahoo's weather API. If you happen to be in the USA, it also collects information from epa.gov's API to display the UV index high for the day.  Supports manual location searching and both imperial and metric units of measure.  Also includes a dynamic background based on local sunrise and sunset times plus current weather conditions.</p>
+          </article>
+          <article>
+            <h3>Quote Machine</h3>
+            <time datetime="2015-07">July 2015</time>
+            <a href="http://tempurturtul.github.io/quote-machine" target="_blank">
+              <img src="content/img/quote-machine-600x600.png" srcset="content/img/quote-machine-300x300.png 300w, content/img/quote-machine-600x600.png 600w" alt="A preview image for the Quote Machine site.">
+            </a>
+            <p>My second completed site, this displays a random quote from a collection.  The challenge was in providing a tweet button that updates with the currently displayed quote instead of constantly using the first displayed quote, then handling cases where the quote exceeded Twitter's character limit.</p>
+          </article>
+          <article>
+            <h3>Twitch Streamers</h3>
+            <time datetime="2015-07">July 2015</time>
+            <a href="http://tempurturtul.github.io/twitch-streamers" target="_blank">
+              <img src="content/img/twitch-streamers-600x600.png" srcset="content/img/twitch-streamers-300x300.png 300w, content/img/twitch-streamers-600x600.png 600w" alt="A preview image for the Twitch Streamers site.">
+            </a>
+            <p>The first site I ever completed.  It interfaces with twitch.tv's public API to retrieve and display information on a list of streamers.  Provides options for sorting and filtering.</p>
+          </article>
+        </div>
+      </main>
+      <form id="email-form">
+        <h2>Contact</h2>
+        <input id="name" type="text" placeholder="Name" maxlength="100">
+        <input id="email" type="email" placeholder="Email" maxlength="100">
+        <textarea id="message" placeholder="Message" maxlength="9000" required></textarea>
+        <button>Send</button>
+      </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!-- Toastr. (https://github.com/CodeSeven/toastr) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="app.min.js"></script>
   </body>
 </html>

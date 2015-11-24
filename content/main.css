@@ -1,0 +1,166 @@
+.container {
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.col {
+}
+
+.hero {
+  width: 100%;
+  height: 250px;
+  line-height: 0;  /* Remove unwanted spacing after div. */
+  background: url('img/hero-1366x768.png') no-repeat center / cover;
+  border-radius: 3px;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: inherit;
+  color: #177;
+}
+
+a:hover {
+  color: #044;
+}
+
+/******************************
+ The header and it's contents.
+******************************/
+header {
+  display: flex;
+  align-items: center;
+  padding: 10px 5px;
+}
+
+/* The Udacity logo. */
+header img {
+  height: 70px;
+}
+
+/* The title and subtitle container. */
+header div {
+  flex: 1 1 auto;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* The title. */
+header h1 {
+}
+
+/* The subtitle. */
+header p {
+}
+
+
+/******************************
+ The main content.
+******************************/
+
+h2 {
+  text-align: center;
+  margin-top: 10px;
+}
+
+article {
+  text-align: center;
+  border-top: 1px solid #777;
+  margin-top: 15px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+article h3 {
+
+}
+
+article time {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+article img {
+  width: 100%;
+  max-width: 600px;
+  border: solid 2px #d5d5d5;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+article img:hover {
+  border: solid 2px #f7971c;  /* Color of Udacity logo. */
+}
+
+/******************************
+ The email form.
+******************************/
+form {
+  border-top: solid 1px #777;
+  margin: 0;
+  text-align: center;
+}
+
+input {
+  padding: 4px;
+  margin: 5px 3px;
+}
+
+textarea {
+  padding: 4px;
+  box-sizing: border-box;
+  height: 8em;
+  width: 500px;
+  max-width: 90%;
+  display: block;
+  margin: 0 auto;
+  resize: none;
+}
+
+form button {
+  padding: 3px 20px;
+  margin: 10px 5px 15px;
+}
+
+/* Vendor-specific styling for placeholder text. */
+::-webkit-input-placeholder {
+  color: #666;
+  opacity:  1;
+}
+::-moz-placeholder {
+  color:    #666;
+  opacity:  1;
+}
+:-ms-input-placeholder {
+  color:    #666;
+  opacity:  1;
+}
+
+/******************************
+ Media queries.
+******************************/
+@media (min-width: 700px) {
+  article {
+    width: 50%;
+  }
+}
