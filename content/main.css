@@ -1,31 +1,25 @@
-.container {
-  margin: 0 auto;
-  max-width: 900px;
+/******************************
+ Global styles.
+******************************/
+* {
+  box-sizing: border-box;
 }
 
-.flex-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-content: center;
-}
-
-.col {
-}
-
-.hero {
-  width: 100%;
-  height: 250px;
-  line-height: 0;  /* Remove unwanted spacing after div. */
-  background: url('img/hero-1366x768.png') no-repeat center / cover;
-  border-radius: 3px;
+html,
+body {
+  height: 100%;
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
 }
 
@@ -35,12 +29,8 @@ p {
 
 a {
   text-decoration: inherit;
-  color: #177;
 }
 
-a:hover {
-  color: #044;
-}
 
 /******************************
  The header and it's contents.
@@ -53,93 +43,151 @@ header {
 
 /* The Udacity logo. */
 header img {
-  height: 70px;
+  height: 64px;
 }
 
 /* The title and subtitle container. */
 header div {
-  flex: 1 1 auto;
+  flex: 1 1;
   text-align: right;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-/* The title. */
-header h1 {
+
+/******************************
+ The nav and it's contents.
+******************************/
+#sticky-nav-container {
+  height: 3em;
+  width: 100%;
+  max-width: 900px;
+  position: relative;
 }
 
-/* The subtitle. */
-header p {
+nav {
+  height: 3em;
+  width: 100%;
+  max-width: 900px;  /* Equivalent to parent container's max-width. */
+  position: absolute;  /* Without this, links are only selectable via their text due to the about section being offset and overlapping the nav. Using z-index doesn't correct the problem. */
+  border-top: #777 solid 1px;
+  border-bottom: #777 solid 1px;
+}
+
+nav ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  height: 100%;
+}
+
+nav ul li {
+  list-style: none;
+  flex: 1 1 1px;  /* Ensure equal widths. */
+  height: 100%;  /* Necessary for height on child a element. */
+}
+
+nav ul li:not(:last-of-type) {
+  border-right: #777 solid 1px;
+}
+
+nav ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #d17e13;
+  font-size: 0.9em;
+  background: white;
+}
+
+nav ul li a:hover {
+  background: #f3f3f3;
 }
 
 
 /******************************
- The main content.
+ The sections and their content.
 ******************************/
+section {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#about p {
+  margin: 10px 15px;
+  text-indent: 3em;
+}
 
 h2 {
   text-align: center;
-  margin-top: 10px;
+  padding-top: 10px;
 }
 
 article {
   text-align: center;
-  border-top: 1px solid #777;
-  margin-top: 15px;
   padding: 20px;
-  box-sizing: border-box;
-}
-
-article h3 {
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 article time {
-  font-size: 0.8rem;
+  font-size: 0.8em;
   font-weight: bold;
 }
 
-article img {
-  width: 100%;
-  max-width: 600px;
-  border: solid 2px #d5d5d5;
-  border-radius: 8px;
-  box-sizing: border-box;
+section a {
+  color: #177;
 }
 
-article img:hover {
-  border: solid 2px #f7971c;  /* Color of Udacity logo. */
+section a:hover {
+  color: #044;
 }
+
 
 /******************************
- The email form.
+ The contact form.
 ******************************/
 form {
-  border-top: solid 1px #777;
-  margin: 0;
   text-align: center;
+  position: relative;
+  width: 100%;
 }
 
-input {
-  padding: 4px;
-  margin: 5px 3px;
-}
-
-textarea {
-  padding: 4px;
-  box-sizing: border-box;
-  height: 8em;
-  width: 500px;
-  max-width: 90%;
+form > *:not(.message-overlay) {
   display: block;
-  margin: 0 auto;
+  margin: 5px auto;
+  width: 600px;
+  max-width: 90%;
+}
+
+form input {
+  padding: 4px;
+  flex: 1 1;
+  max-width: 49%;
+}
+
+form input:first-of-type {
+  margin-right: 2%;
+}
+
+form textarea {
+  padding: 4px;
+  height: 12em;
   resize: none;
 }
 
 form button {
   padding: 3px 20px;
-  margin: 10px 5px 15px;
+}
+
+form button:disabled {
+  color: #555;
 }
 
 /* Vendor-specific styling for placeholder text. */
@@ -147,14 +195,104 @@ form button {
   color: #666;
   opacity:  1;
 }
+
 ::-moz-placeholder {
   color:    #666;
   opacity:  1;
 }
+
 :-ms-input-placeholder {
   color:    #666;
   opacity:  1;
 }
+
+
+/******************************
+ Classes.
+******************************/
+.container {
+  margin: 0 auto;
+  max-width: 900px;
+  height: 100%;  /* Allows enforcing min-height on children. */
+}
+
+.article-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.col {
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.github-logo {
+  max-width: 32px;
+  padding: 5px;
+}
+
+.work-preview {
+  width: 100%;
+  max-width: 600px;
+  border: solid 2px #d5d5d5;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.work-preview:hover {
+  border: solid 2px #f7971c;  /* Color of Udacity logo. */
+}
+
+.message-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(255,255,255,0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 0 0 1px black;
+  color: black;
+  border: solid 1px #ccc;
+  border-radius: 5px;
+  font-size: 1.2em;
+  overflow: hidden;
+}
+
+/* Used for sticky nav. */
+.stick-top {
+  position: fixed;
+  top: 0;
+  z-index: 1;  /* Ensure nav stays on top. */
+  border-top: none;
+}
+
+/* Used by elements the nav links to. */
+.nav-target {
+  /* Offset anchor by nav height. */
+  padding-top: 3em;
+  margin-top: -3em;
+}
+
+/* Assigned to nav link linking to the currently scrolled-to nav target. */
+.current {
+  color: red;
+  /* d17e13 */
+}
+
+.hidden {
+  display: none;
+}
+
 
 /******************************
  Media queries.
@@ -162,5 +300,6 @@ form button {
 @media (min-width: 700px) {
   article {
     width: 50%;
+    box-sizing: border-box;
   }
 }
