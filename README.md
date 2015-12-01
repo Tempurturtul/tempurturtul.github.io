@@ -5,4 +5,4 @@
 Non-minified .js file(s) are located in the `src/app/` directory.
 
 ## Note
-- Soon to be replaced with a simple homepage that includes links to all gh-pages.
+Soon to be replaced with a simple homepage that includes links to all gh-pages.
