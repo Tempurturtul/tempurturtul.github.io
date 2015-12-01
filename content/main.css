@@ -38,7 +38,8 @@ a {
 header {
   display: flex;
   align-items: center;
-  padding: 10px 5px;
+  padding: 10px 7px;
+  height: 90px;
 }
 
 /* The Udacity logo. */
@@ -55,19 +56,23 @@ header div {
   justify-content: center;
 }
 
+header h1 {
+  font-size: 1.6em;  /* Size for smallest width. */
+}
+
 
 /******************************
  The nav and it's contents.
 ******************************/
 #sticky-nav-container {
-  height: 3em;
+  height: 45px;
   width: 100%;
   max-width: 900px;
   position: relative;
 }
 
 nav {
-  height: 3em;
+  height: 45px;
   width: 100%;
   max-width: 900px;  /* Equivalent to parent container's max-width. */
   position: absolute;  /* Without this, links are only selectable via their text due to the about section being offset and overlapping the nav. Using z-index doesn't correct the problem. */
@@ -156,27 +161,35 @@ section a:hover {
 form {
   text-align: center;
   position: relative;
-  width: 100%;
-}
-
-form > *:not(.message-overlay) {
-  display: block;
-  margin: 5px auto;
   width: 600px;
   max-width: 90%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form > * {
+  margin: 5px 0;
+}
+
+/* The input row. */
+form div {
+  width: 100%;
 }
 
 form input {
   padding: 4px;
-  flex: 1 1;
-  max-width: 49%;
+  width: 100%;
 }
 
 form input:first-of-type {
-  margin-right: 2%;
+  margin-right: 5px;
 }
 
 form textarea {
+  width: 100%;
   padding: 4px;
   height: 12em;
   resize: none;
@@ -184,6 +197,7 @@ form textarea {
 
 form button {
   padding: 3px 20px;
+  width: 100px;
 }
 
 form button:disabled {
@@ -279,8 +293,8 @@ form button:disabled {
 /* Used by elements the nav links to. */
 .nav-target {
   /* Offset anchor by nav height. */
-  padding-top: 3em;
-  margin-top: -3em;
+  padding-top: 45px;
+  margin-top: -45px;
 }
 
 /* Assigned to nav link linking to the currently scrolled-to nav target. */
@@ -297,7 +311,17 @@ form button:disabled {
 /******************************
  Media queries.
 ******************************/
+@media (min-width: 500px) {
+  header h1 {
+    font-size: 1.8em;
+  }
+}
+
 @media (min-width: 700px) {
+  header h1 {
+    font-size: 2em;
+  }
+
   article {
     width: 50%;
     box-sizing: border-box;
