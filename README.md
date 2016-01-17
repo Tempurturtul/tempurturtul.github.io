@@ -1,8 +1,5 @@
 # tempurturtul.github.io
 
-[View here.](http://tempurturtul.github.io/)
+My gh-pages homepage.  Contains links to all of my gh-pages hosted content.
 
-Non-minified .js file(s) are located in the `src/app/` directory.
-
-## Note
-Soon to be replaced with a simple homepage that includes links to all gh-pages.
+**[View here.](http://tempurturtul.github.io/)**
