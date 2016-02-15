@@ -1,5 +1,5 @@
 # tempurturtul.github.io
 
-My gh-pages homepage.  Contains links to all of my gh-pages hosted content.
+My gh-pages homepage.
 
 **[View here.](http://tempurturtul.github.io/)**
