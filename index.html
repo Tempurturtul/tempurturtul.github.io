@@ -4,21 +4,32 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>tempurturtul.github.io</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
+    <script>
+      // window.location.replace('https://tempurturtul.github.io/fend-portfolio/');
+    </script>
   </head>
   <body>
-    <div id="main-container">
-      <ul>
-        <li><a href="http://tempurturtul.github.io/fend-portfolio/">Portfolio</a></li>
-        <li><a href="http://tempurturtul.github.io/fend-resume/">Resume</a></li>
-        <li><a href="http://tempurturtul.github.io/fend-frogger/">Frogger Clone</a></li>
-        <li><a href="http://tempurturtul.github.io/fcc-pomodoro-clock/">Pomodoro Clock</a></li>
-        <!-- <li><a href="http://tempurturtul.github.io/fcc-local-weather/">Local Weather</a></li> -->
-        <li><a href="http://tempurturtul.github.io/fcc-twitch-streamers/">Twitch Streamers</a></li>
-        <li><a href="http://tempurturtul.github.io/fcc-quote-machine/">Quote Machine</a></li>
-      </ul>
-    </div>
+    <h1>Sorry!</h1>
+    <p>You should have been redirected to <a href="https://tempurturtul.github.io/fend-portfolio/">tempurturtul.github.io/fend-portfolio/</a>.</p>
+    <p id="dev-notified" style="display:none;">The developer has been notified of the problem.</p>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script>
+      // Attempt to automatically report redirect error.
+      $.ajax({
+        url: 'https://formspree.io/tempurturtul@gmail.com',
+        method: 'POST',
+        data: {
+          _subject: 'Error report from tempurturtul.github.io',
+          message: 'A user navigated to ' + window.location.href + ' and was not redirected as intended.'
+        },
+        dataType: 'json',
+        success: function(data) {
+          if (data.success) {
+            document.getElementById('dev-notified').style.display = 'block';
+          }
+        }
+      });
+    </script>
   </body>
 </html>
