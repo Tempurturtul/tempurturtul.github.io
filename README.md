@@ -2,4 +2,4 @@
 
 My gh-pages homepage.
 
-**[View here.](http://tempurturtul.github.io/)**
+**[View here.](http://tempurturtul.github.io)**
